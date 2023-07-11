@@ -1,10 +1,9 @@
-# Exercícios sobre Exception
+# Exercício AutenticacaoInvalidaException
 
-Considerando o exercicio [Modelagem Sistema Banco](https://20231-ifba-saj-ads-poo.github.io/blog-material-aula/posts/exercicios/ExercicioHeranca/Heranca4%20Banco.html)
+Crie um código que atenda a seguinte descrição:
 
-1. Na classe `Conta`, modifique o método deposita(double x). Ele deve lançar uma exception chamada
-`IllegalArgumentException`, que já faz parte da biblioteca do Java, sempre que o valor passado como
-argumento for inválido (por exemplo, quando for negativo).
-    1. Adicione o try/catch para tratar o erro
-    1. Ao lançar a IllegalArgumentException, passe via construtor uma mensagem a ser exibida. Lembre que a String recebida como parâmetro é acessível depois via o método getMessage() herdado por todas as Exceptions
-1. Modificar o sistema de controle de contas correntes para lançar uma exceção de `SaldoInsufucienteException` caso o valor de saque seja maior que o saldo disponível
+    1. Deve exitir uma classe `Usuario` que representa um usuário com login (`getLogin`) e senha (`getSenha`). 
+    1. Deve exitir uma classe `BancoDeUsuarios` possui uma lista estática de usuários cadastrados, que são inicializados no bloco estático. 
+        1. O método `autenticar` realiza a autenticação, verificando se o login de usuário e a senha fornecidos correspondem a algum usuário na lista.
+    1. Se a autenticação não for bem-sucedida a exceção `AutenticacaoInvalidaException` é lançada com uma mensagem de erro apropriada ("Usuario (login tal) não foi encontrado ou a senha está errada").
+    1. No método `main`, um exemplo de autenticação é realizado chamando o método `autenticar` do `BancoDeUsuarios` com um usuário válido. Se a autenticação for bem-sucedida, será exibida uma mensagem indicando que o usuário foi autenticado. Caso contrário, a mensagem de erro será exibida.
